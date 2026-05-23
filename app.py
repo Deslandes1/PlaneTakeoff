@@ -1,6 +1,6 @@
 import streamlit as st
 
-# 1. Page Configuration Architecture
+# 1. Page Configuration Architecture (Set to wide for massive visual impact)
 st.set_page_config(
     page_title="GlobalInternet.py | Flight Launch Engine",
     page_icon="✈️",
@@ -18,42 +18,56 @@ st.markdown(
     .launch-title {
         text-align: center;
         font-family: 'Arial Black', Gadget, sans-serif;
-        font-size: 3rem !important;
+        font-size: 3.5rem !important;
         font-weight: 900;
         background: linear-gradient(90deg, #00f2fe, #4facfe, #ffcc00);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-top: 15px;
-        margin-bottom: 0px;
+        margin-bottom: 5px;
     }
     .launch-subtitle {
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         color: #00f2fe !important;
         font-weight: bold;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
         letter-spacing: 1.5px;
         text-transform: uppercase;
     }
-    .panel-box {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(0, 242, 254, 0.2);
-        border-radius: 15px;
-        padding: 20px;
-        margin-bottom: 20px;
+    .top-contact-bar {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(0, 242, 254, 0.3);
+        border-radius: 12px;
+        padding: 15px;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    .top-link {
+        color: #ffcc00 !important;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+    .top-link:hover {
+        text-decoration: underline;
+        color: #00f2fe !important;
     }
     .livery-text-display {
-        font-size: 2.5rem;
+        font-size: 3.2rem;
         font-weight: bold;
         color: #ffcc00 !important;
         text-align: center;
         font-family: monospace;
-        border: 2px dashed #00f2fe;
-        padding: 10px;
-        border-radius: 10px;
+        border: 3px dashed #00f2fe;
+        padding: 15px;
+        border-radius: 15px;
         background: rgba(0, 242, 254, 0.05);
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        box-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
     }
-    h2, h3, p, span, div {
+    h1, h2, h3, p, span, div {
         color: #ffffff !important;
     }
     </style>
@@ -65,47 +79,27 @@ st.markdown(
 st.markdown('<h1 class="launch-title">GLOBALINTERNET.PY TAKING OFF</h1>', unsafe_allow_html=True)
 st.markdown('<p class="launch-subtitle">🚀 The Symbolic Ascent of Elite Python Engineering 🚀</p>', unsafe_allow_html=True)
 
-# 4. Interactive Simulation Layout
-col_left, col_right = st.columns([1, 1.2])
-
-with col_left:
-    st.markdown("### 🎛️ Flight Command Console")
-    st.write("Control the trajectory variables of GlobalInternet.py as we disrupt the custom software market.")
-    
-    st.markdown('<div class="panel-box">', unsafe_allow_html=True)
-    engine_thrust = st.slider("Engine Core Thrust (%)", min_value=0, max_value=100, value=95)
-    climb_angle = st.slider("Pitch Ascent Angle (Degrees)", min_value=0, max_value=45, value=18)
-    gear_status = st.radio("Landing Gear Status", ["Extended / Taxi", "Retracted / Cruise Flight"], index=1)
-    st.markdown('</div>', unsafe_allow_html=True)
-    
-    st.markdown("### 🏢 Mission Control Profile")
-    st.markdown(
-        """
-        - **Captain & Chief Architect:** Gesner Deslandes
-        - **Target Altitude:** Infinite Scalability
-        - **Distribution Model:** Zero Subscriptions
-        """
-    )
-
-with col_right:
-    st.markdown("### ✈️ Hull Hull Branding Livery View")
-    # This renders the exact custom name block representing the side of the fuselage
-    st.markdown('<div class="livery-text-display">✈️ Globalinternet.py</div>', unsafe_allow_html=True)
-    st.write("")
-    
-    # Live image framework fallback inside the right layout node
-    st.image(
-        "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQpDNT5kAjY3ffixkFlbpnTJZyp-hHIuM5HFJH2g5EqIFAhQhzn-O85yT0D5Yi3fnGCUevaSOANBjExR3U",
-        caption="Ascent Profile Vectors Loaded: GlobalInternet.py Climbing Out of Runway 12",
-        use_container_width=True
-    )
-
-# 5. Core Contact Routing Footer Terminal
-st.markdown("---")
-col_f1, col_f2, col_f3 = st.columns(3)
-with col_f1:
+# 4. Premium Top Contact Matrix Placement
+st.markdown('<div class="top-contact-bar">', unsafe_allow_html=True)
+col_c1, col_c2, col_c3 = st.columns(3)
+with col_c1:
     st.markdown("📞 **Direct Comm Line:** (509) 4738-5663")
-with col_f2:
+with col_c2:
     st.markdown("📧 **Secure Flight Deck Mail:** deslandes78@gmail.com")
-with col_f3:
-    st.markdown("🌐 **Main Command Base:** [Launch Live Hub ↗️](https://globalinternetsitepy-abh7v6tnmskxxnuplrdcgk.streamlit.app/)")
+with col_c3:
+    st.markdown("🌐 **Main Command Base:** <a class='top-link' href='https://globalinternetsitepy-abh7v6tnmskxxnuplrdcgk.streamlit.app/' target='_blank'>Launch Live Hub ↗️</a>", unsafe_allow_html=True)
+st.markdown('</div>', unsafe_allow_html=True)
+
+# 5. Full-Width Enlarged Aircraft Hull Presentation Layout
+st.markdown('<div class="livery-text-display">✈️ Globalinternet.py</div>', unsafe_allow_html=True)
+
+# Expanded cinema aspect-ratio image node covering the layout center
+st.image(
+    "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQpDNT5kAjY3ffixkFlbpnTJZyp-hHIuM5HFJH2g5EqIFAhQhzn-O85yT0D5Yi3fnGCUevaSOANBjExR3U",
+    caption="Ascent Profile Vectors Loaded: GlobalInternet.py Climbing Into Infinite Scalability",
+    use_container_width=True
+)
+
+# 6. Clean System Footer
+st.markdown("<br><hr style='border-color: rgba(255,255,255,0.1);'>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center; color: #666666; font-size: 0.9rem;'>GlobalInternet.py Aerospace Platform • Zero Subscriptions Engine</div>", unsafe_allow_html=True)
